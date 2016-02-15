@@ -12006,9 +12006,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="RBBB">
-<description>Generated from &lt;b&gt;ByteseekerMini.sch&lt;/b&gt;&lt;p&gt;
-by exp-project-lbr.ulp</description>
+<library name="l4931">
 <packages>
 <package name="L4931">
 <description>&lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;</description>
@@ -12117,7 +12115,7 @@ by exp-project-lbr.ulp</description>
 <part name="R1" library="resistor" deviceset="R-US_" device="0617/5V" value="1.5"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0207/10" value="2.2k"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
-<part name="U2" library="RBBB" deviceset="L4931" device="" value="3V3"/>
+<part name="U2" library="l4931" deviceset="L4931" device="" value="3V3"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="47u"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="47u"/>
 <part name="PAD1" library="wirepad" deviceset="1,6/0,9" device="" value="9V"/>

@@ -1792,9 +1792,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </package>
 </packages>
 </library>
-<library name="RBBB">
-<description>Generated from &lt;b&gt;ByteseekerMini.sch&lt;/b&gt;&lt;p&gt;
-by exp-project-lbr.ulp</description>
+<library name="l4931">
 <packages>
 <package name="L4931">
 <description>&lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;</description>
@@ -2006,7 +2004,7 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C2" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V" value="47u" x="44.45" y="29.21" smashed="yes">
 <attribute name="NAME" x="43.561" y="25.654" size="1.27" layer="25" font="vector" ratio="10"/>
 </element>
-<element name="U2" library="RBBB" package="L4931" value="3V3" x="49.53" y="26.67" smashed="yes" rot="R90">
+<element name="U2" library="l4931" package="L4931" value="3V3" x="49.53" y="26.67" smashed="yes" rot="R90">
 <attribute name="NAME" x="50.8" y="31.4452" size="1.27" layer="25" font="vector" ratio="10" rot="R180"/>
 </element>
 <element name="PAD1" library="wirepad" package="1,6/0,9" value="9V" x="45.72" y="33.02" smashed="yes"/>
