@@ -1,2 +1,2 @@
-# esr-meter
-Arduino-based battery internal resistance meter
+# ESR Meter
+An Arduino-based battery internal resistance meter
