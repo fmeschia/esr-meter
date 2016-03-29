@@ -2094,7 +2094,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="PROD_ID" value="TRANS-10060" x="69.85" y="26.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="74.041" y="27.559" size="1.27" layer="25" font="vector" ratio="10"/>
 </element>
-<element name="R8" library="resistor" package="0617V" value="1" x="76.835" y="21.59" smashed="yes" rot="R270">
+<element name="R8" library="resistor" package="0617V" value="1 1%" x="76.835" y="21.59" smashed="yes" rot="R270">
 <attribute name="NAME" x="73.66" y="23.6474" size="1.27" layer="25" font="vector" ratio="10"/>
 <attribute name="VALUE" x="74.2188" y="20.955" size="1.27" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
@@ -2456,6 +2456,7 @@ Please make sure your boards conform to these design rules.</description>
 <approved hash="19,1,c36ed31b260be897"/>
 <approved hash="19,1,324e1db4af6a7a69"/>
 <approved hash="19,1,6f01a373ace6e6e6"/>
+<approved hash="19,1,628f07af5d8e492f"/>
 </errors>
 </board>
 </drawing>

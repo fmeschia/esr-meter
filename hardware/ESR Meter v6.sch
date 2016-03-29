@@ -12153,7 +12153,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="M"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="FQP30N06L"/>
-<part name="R8" library="resistor" deviceset="R-US_" device="0617/5V" value="1"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="0617/5V" value="1 1%"/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="D1" library="diode" deviceset="1N581*" device="" technology="9-B"/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="EZ" value="100n"/>
