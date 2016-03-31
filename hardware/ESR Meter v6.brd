@@ -2090,7 +2090,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="7.62" y="20.955" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-M" value="OSHW-LOGOM" x="73.66" y="7.62" smashed="yes"/>
-<element name="Q1" library="SparkFun-DiscreteSemi" package="TO220V" value="MOSFET-NCHANNELFQP30N06L" x="69.85" y="26.67" smashed="yes" rot="R270">
+<element name="Q1" library="SparkFun-DiscreteSemi" package="TO220V" value="FQP30N06L" x="69.85" y="26.67" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value="TRANS-10060" x="69.85" y="26.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="74.041" y="27.559" size="1.27" layer="25" font="vector" ratio="10"/>
 </element>
