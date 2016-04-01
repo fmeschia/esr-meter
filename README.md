@@ -19,7 +19,7 @@ Design goals
 Design
 ------
 
-This device measures internal resistance by using Ohm's law: R = ∆V/∆I. The battery is first connected to a load, then the load is removed. The voltage at the battery teminals is measured just before removing the load, and just after the load is removed. The current drawn from the battery is also measured, almost simultaneously with the two voltage measurements.
+This device measures the internal resistance by using Ohm's law: R = ∆V/∆I. The battery is first connected to a load, then the load is removed. The voltage at the battery teminals is measured just before removing the load, and just after the load is removed. The current drawn from the battery is also measured, almost simultaneously with the two voltage measurements.
 
 Voltage and current measurement is performed using a 4-wire (Kelvin) technique: current is measured by a sensing resistor along the "hot" high-current path which connects the battery to the load, and voltage is sensed through two "cold" leads, that carry no current. This also allows for internal resistance measurement of the individual cells in a multi-cell battery, as long as the individual cell voltages are available at a balance tap.
 
@@ -27,7 +27,7 @@ One of the problems that must be solved is how to measure voltages (like the two
 
 One possibility to overcome this problem would be to use differential analog amplifiers to bring the voltages within the measurement range. The gain and the baseline of the amplifiers could be adjusted by the micro with digital potentiometers, to adapt to different battery voltages. The drawback is the number of additional components, which influences the cost of the device.
 
-Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed. If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the yellow DC-coupled positive terminal voltage with the green AC-coupled signal).
+Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed. If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the yellow DC-coupled voltage at the positive battery terminal with the green AC-coupled signal: 1 ms after the load is switched off, when the measurement is taken, the AC-coupled signal is a very faithful estimate of the voltage difference at the battery terminal).
 
 ![DC vs. AC measure of ∆V](screenshots/measure1.png "DC (yellow) vs. AC (green) measure of ∆V")
 
@@ -37,7 +37,7 @@ Such an electronic load can be conveniently built with a LM317 regulator used as
 
 *  a Schottky diode for protection against reverse polarity
 *  a FQP30N06L n-channel MOSFET used as a switch
-*  a 1 Ohm, 1% precision, current sensing resistance
+*  a 1 Ohm, 1% precision, current sensing resistor
 
 ![Hot loop schematic](screenshots/hotloop.png)
 
