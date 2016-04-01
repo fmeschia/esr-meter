@@ -27,11 +27,11 @@ One of the problems that must be solved is how to measure voltages (like the two
 
 One possibility to overcome this problem would be to use differential analog amplifiers to bring the voltages within the measurement range. The gain and the baseline of the amplifiers could be adjusted by the micro with digital potentiometers, to adapt to different battery voltages. The drawback is the number of additional components, which influences the cost of the device.
 
-Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed. If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the green DC-coupled positive terminal voltage with the AC-coupled signal).
+Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed. If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the yellow DC-coupled positive terminal voltage with the green AC-coupled signal).
 
 ![DC vs. AC measure of ∆V](screenshots/measure1.png "DC (yellow) vs. AC (green) measure of ∆V")
 
-In order to ensure reasonable precision with low cost, we also decided to reference the ADCs to the internal bandgap voltage reference of the micro. This means that, if we want to meet the 1 Ohm maximum range stated in the design goals, we need to draw less than about 1.1 A.
+In order to ensure reasonable precision with low cost, we also decided to reference the ADCs to the internal bandgap voltage reference of the micro. This means that, if we want to meet the 1 Ohm maximum range stated in the design goals, we need to draw less than about 1.1 A (we designed the prototype for 0.8 A).
 
 Such an electronic load can be conveniently built with a LM317 regulator used as a current source. This will be the heart of the "hot" loop. Additionally, the hot loop will also include: 
 
@@ -41,7 +41,7 @@ Such an electronic load can be conveniently built with a LM317 regulator used as
 
 ![Hot loop schematic](screenshots/hotloop.png)
 
-Mainly because of the LM317 dropout characteristics, the minimum voltage that can be applied to the hot loop is about 3.5 V. This means that not only we can meet the design goal (4 NiXX cells in series), but we can also measure a single LiPo cell.
+Mainly because of the LM317 dropout characteristics, the minimum voltage that needs to be applied to the hot loop if we want the design current draw is about 4 V. A lower voltage would lead to a lower current figure, as long as it is enough to correctly bias the BJTs inside the LM317 (after that, the device won't work any more). We tested the circuit with a single LiPo cell discharged to 3.5V, without any problem.
 
 The hot loop is switched on and off by the microcontroller, which we decided to power at 3.3 V with an external clock runing at 8 MHz. The program running on the micro switches on the load for 500 ms, then switches it off for 1500 ms, before starting a new cycle. In this way, the 25% duty cycle helps in keeping the average power dissipation acceptable for a LM317 with a passive heat sink, even when sinking current from a 4S LiPo battery.
 
