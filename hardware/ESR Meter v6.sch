@@ -12116,8 +12116,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R2" library="resistor" deviceset="R-US_" device="0207/10" value="2.2k"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="U2" library="l4931" deviceset="L4931" device="" value="3V3"/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="47u"/>
-<part name="C2" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="47u"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="10u"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="CAP_POL" device="PTH2" value="10u"/>
 <part name="PAD1" library="wirepad" deviceset="1,6/0,9" device="" value="9V"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
@@ -12383,6 +12383,10 @@ JUMPER</text>
 <junction x="40.64" y="106.68"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <junction x="35.56" y="86.36"/>
+<pinref part="JP2" gate="G$1" pin="3"/>
+<wire x1="10.16" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="83.82" x2="25.4" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="88.9" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>

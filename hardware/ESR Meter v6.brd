@@ -1998,10 +1998,10 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V" value="47u" x="44.45" y="22.86" smashed="yes" rot="R90">
+<element name="C1" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V" value="10u" x="44.45" y="22.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="45.974" y="20.066" size="1.27" layer="25" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V" value="47u" x="44.45" y="29.21" smashed="yes">
+<element name="C2" library="SparkFun-Capacitors" package="CPOL-RADIAL-10UF-25V" value="10u" x="44.45" y="29.21" smashed="yes">
 <attribute name="NAME" x="43.561" y="25.654" size="1.27" layer="25" font="vector" ratio="10"/>
 </element>
 <element name="U2" library="l4931" package="L4931" value="3V3" x="49.53" y="26.67" smashed="yes" rot="R90">
@@ -2199,7 +2199,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="21.59" y1="13.335" x2="23.495" y2="11.43" width="0.6096" layer="16"/>
 <wire x1="23.495" y1="11.43" x2="39.37" y2="11.43" width="0.6096" layer="16"/>
 <wire x1="39.37" y1="11.43" x2="41.91" y2="13.97" width="0.6096" layer="16"/>
-<wire x1="41.91" y1="13.97" x2="41.91" y2="22.86" width="0.6096" layer="16"/>
+<wire x1="41.91" y1="13.97" x2="41.91" y2="20.32" width="0.6096" layer="16"/>
+<wire x1="41.91" y1="20.32" x2="41.91" y2="22.86" width="0.6096" layer="16"/>
 <wire x1="49.53" y1="21.59" x2="49.545" y2="17.78" width="0.6096" layer="1"/>
 <wire x1="49.545" y1="17.78" x2="59.69" y2="7.62" width="0.6096" layer="1"/>
 <wire x1="59.69" y1="7.62" x2="63.515" y2="7.62" width="0.6096" layer="1"/>
@@ -2213,6 +2214,11 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="41.91" y1="22.86" x2="43.18" y2="24.13" width="0.6096" layer="16"/>
 <contactref element="C9" pad="1"/>
 <wire x1="16.51" y1="4.445" x2="16.51" y2="6.985" width="0.3048" layer="1"/>
+<contactref element="JP2" pad="3"/>
+<wire x1="34.29" y1="19.685" x2="34.29" y2="20.32" width="0.6096" layer="16"/>
+<wire x1="34.29" y1="20.32" x2="35.56" y2="21.59" width="0.6096" layer="16"/>
+<wire x1="35.56" y1="21.59" x2="40.64" y2="21.59" width="0.6096" layer="16"/>
+<wire x1="40.64" y1="21.59" x2="41.91" y2="20.32" width="0.6096" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="U1" pad="23"/>
