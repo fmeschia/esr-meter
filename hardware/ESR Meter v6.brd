@@ -141,7 +141,7 @@
 <text x="5.08" y="1.27" size="1.27" layer="25" font="vector" ratio="10">ESR Meter by Francesco Meschia</text>
 <text x="4.445" y="28.575" size="1.27" layer="25" ratio="10">LCD</text>
 <text x="25.4" y="16.51" size="1.27" layer="25" ratio="10">SERIAL</text>
-<text x="69.215" y="1.905" size="1.27" layer="25" font="vector" ratio="10">REV B</text>
+<text x="69.215" y="1.905" size="1.27" layer="25" font="vector" ratio="10">REV C</text>
 </plain>
 <libraries>
 <library name="SparkFun-Capacitors">
@@ -1821,6 +1821,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="Supply" width="0.6096" drill="0">
+</class>
+<class number="2" name="Grounds" width="0.6096" drill="0">
+<clearance class="1" value="0.3556"/>
+</class>
+<class number="3" name="HV" width="0.6096" drill="0">
+<clearance class="2" value="0.9144"/>
+</class>
 </classes>
 <designrules name="oshpark-2layer">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
@@ -2125,7 +2133,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="10.16" y1="27.94" x2="10.16" y2="33.02" width="0.3048" layer="1"/>
 <wire x1="12.065" y1="34.925" x2="55.245" y2="34.925" width="0.3048" layer="1"/>
 </signal>
-<signal name="GND">
+<signal name="GND" class="2">
 <contactref element="U2" pad="GND"/>
 <contactref element="C2" pad="2"/>
 <contactref element="C1" pad="2"/>
@@ -2171,7 +2179,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="43.815" y1="8.89" x2="46.355" y2="6.35" width="0.3048" layer="1"/>
 <wire x1="46.355" y1="6.35" x2="46.355" y2="5.715" width="0.3048" layer="1"/>
 </signal>
-<signal name="N$6">
+<signal name="N$6" class="1">
 <contactref element="U2" pad="IN"/>
 <contactref element="PAD1" pad="1"/>
 <contactref element="C2" pad="1"/>
@@ -2182,7 +2190,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="52.705" y1="20.955" x2="52.705" y2="26.035" width="0.6096" layer="1"/>
 <wire x1="58.42" y1="15.24" x2="52.705" y2="20.955" width="0.6096" layer="1"/>
 </signal>
-<signal name="5V">
+<signal name="5V" class="1">
 <contactref element="U2" pad="OUT"/>
 <contactref element="C1" pad="1"/>
 <contactref element="R4" pad="2"/>
@@ -2340,9 +2348,11 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="PD4">
 <contactref element="U1" pad="6"/>
 <contactref element="JP4" pad="8"/>
-<wire x1="24.13" y1="14.605" x2="23.495" y2="15.24" width="0.3048" layer="1"/>
-<wire x1="23.495" y1="15.24" x2="23.495" y2="31.115" width="0.3048" layer="1"/>
-<wire x1="23.495" y1="31.115" x2="24.13" y2="31.75" width="0.3048" layer="1"/>
+<wire x1="24.13" y1="14.605" x2="24.13" y2="15.875" width="0.3048" layer="1"/>
+<wire x1="24.13" y1="15.875" x2="23.495" y2="16.51" width="0.3048" layer="1"/>
+<wire x1="23.495" y1="16.51" x2="23.495" y2="29.21" width="0.3048" layer="1"/>
+<wire x1="23.495" y1="29.21" x2="24.13" y2="29.845" width="0.3048" layer="1"/>
+<wire x1="24.13" y1="29.845" x2="24.13" y2="31.75" width="0.3048" layer="1"/>
 </signal>
 <signal name="PD5">
 <contactref element="U1" pad="11"/>
@@ -2367,7 +2377,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="43.18" y1="3.81" x2="46.355" y2="3.81" width="0.3048" layer="1"/>
 <wire x1="41.275" y1="5.715" x2="43.18" y2="3.81" width="0.3048" layer="1"/>
 </signal>
-<signal name="N$100">
+<signal name="N$100" class="3">
 <contactref element="U3" pad="IN"/>
 <contactref element="D1" pad="C"/>
 <wire x1="62.23" y1="24.13" x2="59.69" y2="24.13" width="1.6764" layer="16"/>
@@ -2398,7 +2408,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="66.675" y1="33.655" x2="69.85" y2="30.48" width="0.3048" layer="1"/>
 <wire x1="69.85" y1="30.48" x2="69.85" y2="29.21" width="0.3048" layer="1"/>
 </signal>
-<signal name="N$2">
+<signal name="N$2" class="3">
 <contactref element="Q1" pad="2"/>
 <contactref element="R1" pad="2"/>
 <wire x1="69.85" y1="26.67" x2="68.58" y2="26.67" width="1.6764" layer="16"/>
@@ -2411,7 +2421,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="67.31" y1="25.4" x2="68.58" y2="26.67" width="1.6764" layer="1"/>
 <wire x1="68.58" y1="26.67" x2="69.85" y2="26.67" width="1.6764" layer="1"/>
 </signal>
-<signal name="N$18">
+<signal name="N$18" class="3">
 <contactref element="U3" pad="OUT"/>
 <contactref element="R1" pad="1"/>
 <wire x1="67.31" y1="17.78" x2="66.04" y2="17.78" width="1.6764" layer="16"/>
@@ -2423,7 +2433,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="64.77" y1="19.05" x2="64.77" y2="26.67" width="1.6764" layer="1"/>
 <wire x1="64.77" y1="26.67" x2="59.69" y2="26.67" width="1.6764" layer="1"/>
 </signal>
-<signal name="ISENSE+">
+<signal name="ISENSE+" class="2">
 <contactref element="Q1" pad="3"/>
 <contactref element="R8" pad="1"/>
 <wire x1="69.85" y1="24.13" x2="76.835" y2="24.13" width="1.6764" layer="16"/>
@@ -2438,7 +2448,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="72.39" y1="7.62" x2="72.39" y2="19.685" width="0.3048" layer="1"/>
 <wire x1="72.39" y1="19.685" x2="76.835" y2="24.13" width="0.3048" layer="1"/>
 </signal>
-<signal name="BATT+">
+<signal name="BATT+" class="3">
 <contactref element="BATT+" pad="1"/>
 <contactref element="D1" pad="A"/>
 <wire x1="62.23" y1="16.51" x2="62.23" y2="12.7" width="1.6764" layer="16"/>
@@ -2462,7 +2472,36 @@ Please make sure your boards conform to these design rules.</description>
 <approved hash="19,1,c36ed31b260be897"/>
 <approved hash="19,1,324e1db4af6a7a69"/>
 <approved hash="19,1,6f01a373ace6e6e6"/>
+<approved hash="5,1,291275a7524de966"/>
+<approved hash="5,1,00383a976ec42178"/>
+<approved hash="5,1,209a1a0bdd9be211"/>
+<approved hash="3,16,e0a4064205bae35c"/>
+<approved hash="3,1,e0a4064205bae35c"/>
+<approved hash="3,1,d20103e7039ad27c"/>
+<approved hash="3,1,4be49c029f934875"/>
+<approved hash="3,1,7c71c79bc4107ffa"/>
+<approved hash="3,1,ae6c9215eea5cef0"/>
+<approved hash="3,1,9ae4a402a7949972"/>
+<approved hash="3,1,bce3d8c5236964d4"/>
+<approved hash="3,1,62658f838f1562f3"/>
+<approved hash="3,1,51be0e1945298906"/>
+<approved hash="3,1,42e4000202b24054"/>
+<approved hash="3,1,63223804628f9101"/>
+<approved hash="3,1,e709daefdb81e667"/>
+<approved hash="3,1,4b265e0bfd059aa2"/>
+<approved hash="5,1,e6b8aea40a5e09a0"/>
+<approved hash="5,1,d71351d997845fef"/>
+<approved hash="5,1,d79bd7ebc516595c"/>
+<approved hash="5,1,b319cbcf17009842"/>
+<approved hash="5,1,553bab57f1ec7cc7"/>
+<approved hash="5,1,1b81fc9191650ca7"/>
 <approved hash="19,1,628f07af5d8e492f"/>
+<approved hash="5,16,e6b8aea40a5e09a0"/>
+<approved hash="5,16,d79bd7ebc516595c"/>
+<approved hash="5,16,b319cbcf17009842"/>
+<approved hash="5,16,d71351d997845fef"/>
+<approved hash="5,16,553bab57f1ec7cc7"/>
+<approved hash="5,16,1b81fc9191650ca7"/>
 </errors>
 </board>
 </drawing>

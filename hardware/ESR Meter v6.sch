@@ -12108,6 +12108,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="Supply" width="0.6096" drill="0">
+</class>
+<class number="2" name="Grounds" width="0.6096" drill="0">
+<clearance class="1" value="0.3556"/>
+</class>
+<class number="3" name="HV" width="0.6096" drill="0">
+<clearance class="2" value="0.9144"/>
+</class>
 </classes>
 <parts>
 <part name="U1" library="SparkFun-DigitalIC" deviceset="ATMEGA328P_PDIP" device="" value="ATMEGA328P"/>
@@ -12256,7 +12264,7 @@ JUMPER</text>
 <wire x1="119.38" y1="55.88" x2="91.44" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U2" gate="1" pin="GND"/>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
@@ -12348,7 +12356,7 @@ JUMPER</text>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="N$6" class="1">
 <segment>
 <pinref part="U2" gate="1" pin="IN"/>
 <pinref part="PAD1" gate="1" pin="P"/>
@@ -12360,7 +12368,7 @@ JUMPER</text>
 <wire x1="121.92" y1="10.16" x2="121.92" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="1">
 <segment>
 <pinref part="U2" gate="1" pin="OUT"/>
 <wire x1="139.7" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
@@ -12597,7 +12605,7 @@ JUMPER</text>
 <junction x="127" y="91.44"/>
 </segment>
 </net>
-<net name="N$100" class="0">
+<net name="N$100" class="3">
 <segment>
 <pinref part="U3" gate="G$1" pin="IN"/>
 <pinref part="D1" gate="G$1" pin="C"/>
@@ -12621,7 +12629,7 @@ JUMPER</text>
 <wire x1="129.54" y1="55.88" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="N$2" class="3">
 <segment>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -12631,14 +12639,14 @@ JUMPER</text>
 <junction x="139.7" y="60.96"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="N$18" class="3">
 <segment>
 <pinref part="U3" gate="G$1" pin="OUT"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="152.4" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="ISENSE+" class="0">
+<net name="ISENSE+" class="2">
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="G$1" pin="S"/>
@@ -12654,7 +12662,7 @@ JUMPER</text>
 <label x="104.14" y="76.2" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="BATT+" class="0">
+<net name="BATT+" class="3">
 <segment>
 <pinref part="BATT+" gate="G$1" pin="P"/>
 <pinref part="D1" gate="G$1" pin="A"/>
