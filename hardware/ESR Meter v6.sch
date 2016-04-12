@@ -12111,7 +12111,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <class number="1" name="Supply" width="0.6096" drill="0">
 </class>
 <class number="2" name="Grounds" width="0.6096" drill="0">
-<clearance class="1" value="0.3556"/>
+<clearance class="1" value="0.6096"/>
 </class>
 <class number="3" name="HV" width="0.6096" drill="0">
 <clearance class="2" value="0.9144"/>
@@ -12356,7 +12356,7 @@ JUMPER</text>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 </segment>
 </net>
-<net name="N$6" class="1">
+<net name="N$6" class="3">
 <segment>
 <pinref part="U2" gate="1" pin="IN"/>
 <pinref part="PAD1" gate="1" pin="P"/>

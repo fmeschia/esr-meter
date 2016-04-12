@@ -140,7 +140,7 @@
 <text x="58.42" y="19.05" size="1.27" layer="25" font="vector" ratio="10">U3</text>
 <text x="5.08" y="1.27" size="1.27" layer="25" font="vector" ratio="10">ESR Meter by Francesco Meschia</text>
 <text x="4.445" y="28.575" size="1.27" layer="25" ratio="10">LCD</text>
-<text x="25.4" y="16.51" size="1.27" layer="25" ratio="10">SERIAL</text>
+<text x="25.4" y="16.51" size="1.27" layer="25" font="vector" ratio="10">SERIAL</text>
 <text x="69.215" y="1.905" size="1.27" layer="25" font="vector" ratio="10">REV C</text>
 </plain>
 <libraries>
@@ -1824,7 +1824,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <class number="1" name="Supply" width="0.6096" drill="0">
 </class>
 <class number="2" name="Grounds" width="0.6096" drill="0">
-<clearance class="1" value="0.3556"/>
+<clearance class="1" value="0.6096"/>
 </class>
 <class number="3" name="HV" width="0.6096" drill="0">
 <clearance class="2" value="0.9144"/>
@@ -2179,7 +2179,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="43.815" y1="8.89" x2="46.355" y2="6.35" width="0.3048" layer="1"/>
 <wire x1="46.355" y1="6.35" x2="46.355" y2="5.715" width="0.3048" layer="1"/>
 </signal>
-<signal name="N$6" class="1">
+<signal name="N$6" class="3">
 <contactref element="U2" pad="IN"/>
 <contactref element="PAD1" pad="1"/>
 <contactref element="C2" pad="1"/>
