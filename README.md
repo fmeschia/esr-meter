@@ -9,7 +9,7 @@ This device measures the internal resistance of a battery by measuring the volta
 Design goals
 ------------
 * Measure internal resistance for batteries with voltages ranging from a 4-cell NiXX to a 4S LiPo pack
-* Resistance range up to 1 Ohm
+* Resistance range: 1 to 1000 mOhm
 * Ability to do 4-wire measurements
 * Target precision: 2% ± 1 LSB
 * Ability to draw power either from the battery under test, or from a separate battery
