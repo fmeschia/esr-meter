@@ -51,6 +51,8 @@ void setup() {
   digitalWrite(PIN_GATE, HIGH);
   lcd.begin(16, 2);
   lcd.print("ESR Meter v0.4");
+  Serial.begin(9600);
+  Serial.println("ESR Meter v0.4 ready");
   delay(1000);
   for (int i=0; i<100; i++) {
     analogRead(PIN_VSL); 
