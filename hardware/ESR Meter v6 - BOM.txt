@@ -1,4 +1,4 @@
-Partlist exported from /Users/franz/Development/Arduino/esr-meter/hardware/ESR Meter v6.sch at 4/2/16 10:34 AM
+Partlist exported from esr-meter/hardware/ESR Meter v6.sch at 4/2/16 10:34 AM
 
 Part  Value           Device                   Package              Description                                                                                                                                                                                                        PROD_ID    
 C1    10u             CAP_POLPTH2              CPOL-RADIAL-10UF-25V Capacitor Polarized                                                                                                                                                                                                           

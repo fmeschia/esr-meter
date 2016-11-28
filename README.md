@@ -67,6 +67,11 @@ Other notes:
 * the other jumper, JP1, if closed forces the software running in the ATMega328P to show debug information (sensed voltages and currents) in addition to the resistance value.
 * another header, JP2, provides an interface to the serial port of the ATMega328P. It is pin-compatible (but pay attention to the correct orientation!) with the FTDI FT232L breakout board offered by Sparkfun (https://www.sparkfun.com/products/9873). The serial port can be used to upload the software into the microcontroller if an Arduino bootloader is used.
 
+The microcontroller must be programmed with the software found in the esr_meter directory. First the software must be compiled within the Arduino IDE, then it must be burned into the ATmega328P flash memory. There are essentially two options for that:
+
+* if you use a microcontroller with a pre-burned Arduino bootloader, you can install the chip in the PCB, and then program it via the JP2 serial port;
+* if your microcontroller doesn't have an Arduino bootleader yet, you need to use an ISP programmer (there are several options –- see https://www.arduino.cc/en/Main/Standalone for example) and burn the Arduino bootloader, then you can upload the software via the JP2 serial port.
+
 Assembly notes:
 
 * the LCD module is to be connected to the board with a short length of 6-lead ribbon cable. The 6 leftmost pins of JP4 go to pins 1 to 6 on the LCD module, and the 6 rightmost pins go to pins 11 to 16.
@@ -77,6 +82,6 @@ The following are some pictures of a specimen of the device:
 
 ![The PCB](screenshots/IMG_3101.jpg "The PCB for the ESR Meter")
 ![Component placement overview](screenshots/IMG_3103.jpg "An overview of component placement and external connections")
-![Component placement detail](screenshots/IMG_3103.jpg "A detail view component placement and LCD connections")
+![Component placement detail](screenshots/IMG_3104.jpg "A detail view component placement and LCD connections")
 ![Test leads with 4 mm bullet connectors](screenshots/IMG_3110.jpg "The battery end of the test leads, with 4 mm bullet connectors. The voltage sense leads can be plugged into a mating connector soldered to the battery high-currentconnector, or they can be plugged into the balance connector of a LiPo battery")
 ![Finished devide](screenshots/IMG_3157.jpg "The completed device")
