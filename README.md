@@ -27,7 +27,11 @@ One of the problems that must be solved is how to measure voltages (like the two
 
 One possibility to overcome this problem would be to use differential analog amplifiers to bring the voltages within the measurement range. The gain and the baseline of the amplifiers could be adjusted by the micro with digital potentiometers, to adapt to different battery voltages. The drawback is the number of additional components, which influences the cost of the device.
 
-Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed. If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the yellow DC-coupled voltage at the positive battery terminal with the green AC-coupled signal: 1 ms after the load is switched off, when the measurement is taken, the AC-coupled signal is a very faithful estimate of the voltage difference at the battery terminal).
+Instead of going this route, we decided to use "AC coupling". The voltages sensed at the battery terminals are filtered through one-pole (RC) low-pass filters, so that their DC component is removed.
+
+![AC-coupled voltage sense inputs](screenshots/acinput.png "AC-coupled voltage sense inputs")
+
+If the time constant of the fiter is sufficiently long compared to the load-switching-to-measurement delay, we would only measure the actual change in voltage, with negligible error (compare, in the scope plot below, the yellow DC-coupled voltage at the positive battery terminal with the green AC-coupled signal: 1 ms after the load is switched off, when the measurement is taken, the AC-coupled signal is a very faithful estimate of the voltage difference at the battery terminal).
 
 ![DC vs. AC measure of ∆V](screenshots/measure1.png "DC (yellow) vs. AC (green) measure of ∆V")
 
